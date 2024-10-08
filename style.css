@@ -6,6 +6,12 @@
     appearance: none;
 }
 
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .container {
     display: grid;
     min-height: 100vh;
