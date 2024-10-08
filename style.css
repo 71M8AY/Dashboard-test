@@ -19,7 +19,7 @@ ul > li {
 .container {
     display: grid;
     min-height: 100vh;
-    grid-template-columns: minmax(150px, 1fr) minmax(300px, 5fr);
+    grid-template-columns: minmax(192px, 1fr) minmax(300px, 6fr);
     grid-template-rows: minmax(150px, 1fr) minmax(300px, 4fr);
     grid-template-areas:  
     'sidebar header'
@@ -31,9 +31,9 @@ ul > li {
     font-weight: 700;
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: max(20px, 2.5vw);
     padding-top: 10%;
-    padding-left: min(10%, 30px);
+    padding-left: clamp(10%, 1.5vw, 100px);
     grid-area: sidebar;
 }
 
@@ -56,6 +56,44 @@ ul > li {
 .logo p {
     padding-left: 2%;
     font-size: clamp(16px, 2vw, 25px);
+}
+
+.side-function ul {
+    display: flex;
+    flex-direction: column;
+    gap: max(5px, 1vw);
+}
+
+.side-function svg {
+    display: inline-block;
+    width: min(15%, 30px);
+    margin-right: 1vw;
+}
+
+.side-function li {
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.side-about ul {
+    display: flex;
+    flex-direction: column;
+    gap: max(5px, 1vw);
+}
+
+.side-about a {
+    display: flex;
+    align-items: center;
+    gap: max(5px,0.5vw);
+}
+
+.side-about svg {
+    display: inline-block;
+    width: max(20px, 1.8vw);
+    margin-right: 0.5vw;
+}
+
+.side-about li {
+    font-size: clamp(16px, 2vw, 20px);
 }
 
 .header {
