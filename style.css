@@ -6,6 +6,10 @@
     appearance: none;
 }
 
+ul > li {
+    list-style: none;
+}
+
 .roboto-slab {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -15,7 +19,7 @@
 .container {
     display: grid;
     min-height: 100vh;
-    grid-template-columns: minmax(150px, 1fr) minmax(300px, 4fr);
+    grid-template-columns: minmax(150px, 1fr) minmax(300px, 5fr);
     grid-template-rows: minmax(150px, 1fr) minmax(300px, 4fr);
     grid-template-areas:  
     'sidebar header'
@@ -24,15 +28,34 @@
 
 .sidebar {
     background-color: lightblue;
+    font-weight: 700;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    padding: 1em 0 0 1em;
+    padding-top: 10%;
+    padding-left: min(10%, 30px);
     grid-area: sidebar;
 }
 
-ul > li {
-    list-style: none;
+.sidebar a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo a {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-items: start;
+    align-items: baseline;
+}
+
+.logo svg {
+    width: min(15%, 40px);
+}
+
+.logo p {
+    padding-left: 2%;
+    font-size: clamp(16px, 2vw, 25px);
 }
 
 .header {
