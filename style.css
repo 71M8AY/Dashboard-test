@@ -284,6 +284,9 @@ ul > li {
 
 .main .main-side {
   display: flex;
+  position: sticky;
+  top: 0;
+  align-self: start;
   font-size: clamp(11px, 1vw, 13px);
   flex-direction: column;
   gap: 20px;
