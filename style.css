@@ -15,10 +15,6 @@ ul > li {
   list-style: none;
 }
 
-body {
-  background-color: rgb(253, 253, 228);
-}
-
 .roboto-slab {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -29,7 +25,11 @@ body {
   display: grid;
   min-height: 100vh;
   grid-template-columns: minmax(192px, 1fr) minmax(650px, 6fr);
-  grid-template-rows: minmax(150px, max-content) minmax(300px, max-content);
+  grid-template-rows: minmax(150px, max-content) clamp(
+      300px,
+      100vh,
+      max-content
+    );
   grid-template-areas:
     "sidebar header"
     "sidebar  main";
@@ -264,7 +264,7 @@ body {
 }
 
 .main {
-  background-color: rgb(253, 253, 228);
+  background-color: #ffd0b6b0;
   display: grid;
   grid-template-columns: 5fr minmax(250px, 1fr);
   grid-template-rows: 50% 1fr;
@@ -342,9 +342,9 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-auto-rows: minmax(220px, 1fr);
+  grid-auto-rows: minmax(220px, max-content);
   gap: max(20px, 4vw);
-  font-size: clamp(12px, 1vw, 16px);
+  font-size: clamp(14px, 1vw, 16px);
 }
 
 .cards .title {
@@ -356,9 +356,25 @@ body {
 }
 
 .card {
-  box-shadow: 2px 2px 5px #00000069;
+  display: grid;
+  gap: clamp(15px, 1vw, 30px);
+  grid-template-rows: 1fr 30px;
+  box-shadow: 2px 2px 5px #00000069, inset 10px 0px 0px #e5ffb6;
   margin: clamp(15px, 1vw, 20px);
   background-color: white;
   border-radius: 10px;
   padding: max(10px, 1vw);
+  padding-left: max(30px, 1vw);
+}
+
+.card-function {
+  display: flex;
+  gap: max(20px, 10%);
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.card-function svg {
+  width: 25px;
+  height: 25px;
 }
