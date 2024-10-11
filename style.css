@@ -15,6 +15,10 @@ ul > li {
   list-style: none;
 }
 
+body {
+  background-color: rgb(253, 253, 228);
+}
+
 .roboto-slab {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -25,7 +29,7 @@ ul > li {
   display: grid;
   min-height: 100vh;
   grid-template-columns: minmax(192px, 1fr) minmax(650px, 6fr);
-  grid-template-rows: minmax(150px, 1fr) minmax(300px, 4fr);
+  grid-template-rows: minmax(150px, max-content) minmax(300px, max-content);
   grid-template-areas:
     "sidebar header"
     "sidebar  main";
@@ -37,9 +41,10 @@ ul > li {
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  gap: max(20px, 2.5vw);
+  gap: clamp(30px, 2.5vw, 50px);
   padding-top: 10%;
   padding-left: clamp(10%, 1.5vw, 100px);
+  padding-right: clamp(10%, 1.5vw, 100px);
   grid-area: sidebar;
 }
 
@@ -73,7 +78,7 @@ ul > li {
 .side-function ul {
   display: flex;
   flex-direction: column;
-  gap: max(5px, 1vw);
+  gap: clamp(20px, 1vw, 40px);
 }
 
 .side-function a {
@@ -87,6 +92,7 @@ ul > li {
 
 .side-function svg {
   display: inline-block;
+  min-width: 25px;
   width: min(15%, 30px);
   margin-right: 1vw;
 }
@@ -98,7 +104,7 @@ ul > li {
 .side-about ul {
   display: flex;
   flex-direction: column;
-  gap: max(5px, 1vw);
+  gap: clamp(20px, 1vw, 40px);
 }
 
 .side-about a {
@@ -336,5 +342,23 @@ ul > li {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: minmax(220px, 1fr);
   gap: max(20px, 4vw);
+  font-size: clamp(12px, 1vw, 16px);
+}
+
+.cards .title {
+  font-size: clamp(16px, 1vw, 18px);
+}
+
+.projects > .title {
+  font-size: clamp(18px, 1vw, 20px);
+}
+
+.card {
+  box-shadow: 2px 2px 5px #00000069;
+  margin: clamp(15px, 1vw, 20px);
+  background-color: white;
+  border-radius: 10px;
+  padding: max(10px, 1vw);
 }
