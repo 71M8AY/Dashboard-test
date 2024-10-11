@@ -273,15 +273,39 @@ ul > li {
 
 .main .main-side {
   display: flex;
+  font-size: clamp(11px, 1vw, 13px);
   flex-direction: column;
   gap: 20px;
   padding: 30px 20px 20px 0px;
 }
 
+.announce div + div {
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.397);
+}
+
+.side-title {
+  font-size: clamp(13px, 1vw, 14px);
+}
+
+.main-side > div > .side-title {
+  padding-bottom: 10px;
+  font-size: clamp(15px, 1vw, 17px);
+}
+
 .main .announce,
 .main .trending {
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
   background-color: #ffffff;
   box-shadow: 2px 2px 5px #00000069;
   border-radius: 8px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: max(20px, 4vw);
 }
