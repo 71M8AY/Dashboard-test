@@ -40,6 +40,10 @@ ul > li {
   background: #92d4dd;
   font-weight: 700;
   display: flex;
+  position: sticky;
+  align-self: start;
+  height: 100vh;
+  top: 0;
   flex-direction: column;
   gap: clamp(30px, 2.5vw, 50px);
   padding-top: 10%;
