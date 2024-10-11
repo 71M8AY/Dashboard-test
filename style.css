@@ -372,9 +372,15 @@ ul > li {
   gap: max(20px, 10%);
   justify-content: flex-end;
   align-items: flex-end;
+  padding-right: max(10px, 1vw);
 }
 
 .card-function svg {
   width: 25px;
   height: 25px;
+}
+
+.card-function a:hover {
+  fill: lightpink;
+  filter: drop-shadow(2px 1px 0px #a6fcff);
 }
