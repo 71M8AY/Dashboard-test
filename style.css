@@ -24,7 +24,7 @@ ul > li {
 .container {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: minmax(192px, 1fr) minmax(500px, 6fr);
+  grid-template-columns: minmax(192px, 1fr) minmax(650px, 6fr);
   grid-template-rows: minmax(150px, 1fr) minmax(300px, 4fr);
   grid-template-areas:
     "sidebar header"
@@ -255,16 +255,33 @@ ul > li {
 .main {
   background-color: rgb(253, 253, 228);
   display: grid;
-  grid-template-columns: 5fr minmax(200px, 1fr);
+  grid-template-columns: 5fr minmax(250px, 1fr);
   grid-template-rows: 50% 1fr;
   grid-area: main;
   gap: 0 50px;
 }
 
+.title,
+.side-title {
+  font-weight: 700;
+}
+
 .main .projects {
+  min-width: 330px;
   padding: 50px 0 20px 20px;
 }
 
 .main .main-side {
-  padding: 50px 20px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px 20px 0px;
+}
+
+.main .announce,
+.main .trending {
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px #00000069;
+  border-radius: 8px;
 }
