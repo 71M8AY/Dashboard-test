@@ -32,6 +32,7 @@ ul > li {
 }
 
 .sidebar {
+  z-index: 2;
   background-color: lightblue;
   font-weight: 700;
   display: flex;
@@ -116,11 +117,13 @@ ul > li {
 }
 
 .header {
+  z-index: 1;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   background-color: lightpink;
   grid-area: header;
+  box-shadow: 0px 5px 20px 0px #00000067;
 }
 
 .search {
