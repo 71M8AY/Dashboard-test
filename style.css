@@ -24,7 +24,7 @@ ul > li {
 .container {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: minmax(192px, 1fr) minmax(450px, 6fr);
+  grid-template-columns: minmax(192px, 1fr) minmax(500px, 6fr);
   grid-template-rows: minmax(150px, 1fr) minmax(300px, 4fr);
   grid-template-areas:
     "sidebar header"
@@ -196,6 +196,31 @@ ul > li {
   width: 25px;
 }
 
+.name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: max(10px, 1vw);
+  padding-left: max(25px, 2.5vw);
+}
+
+.name img {
+  width: max(70px, 3.5vw);
+  height: max(70px, 3.5vw);
+  border-radius: 50%;
+}
+
+.name div {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.name div p:last-child {
+  font-size: max(19px, 1.2vw);
+  min-width: 150px;
+  margin-right: 10px;
+}
+
 .files {
   display: flex;
   gap: max(5px, 1vw);
@@ -206,6 +231,7 @@ ul > li {
 
 .files button {
   font-size: max(15px, 1vw);
+  font-weight: 600;
   width: max(65px, 5vw);
   height: max(30px, 1.8vw);
   background-color: #7fffd4;
