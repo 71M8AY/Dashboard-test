@@ -205,6 +205,7 @@ ul > li {
 }
 
 .files button {
+  font-size: max(15px, 1vw);
   width: max(65px, 5vw);
   height: max(30px, 1.8vw);
   background-color: #7fffd4;
